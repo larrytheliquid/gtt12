@@ -9,6 +9,8 @@ record RawMonoid (S : Set) : Set₁ where
     e : S
     _∙_ : (x y : S) → S
 
+   -- TODO maybe show mconcat here too
+
 RawMonoid∶Bool/false/∨ : RawMonoid Bool
 RawMonoid∶Bool/false/∨ = record
   { e = false
