@@ -3,6 +3,7 @@ module Prelude where
 infix  2 _∎ _≡_
 infixr 2 _≡⟨_⟩_
 infixr 3 _$_
+infixr 9 _∘_
 
 data _≡_ {A : Set} (a : A) : A → Set where
   refl : a ≡ a
@@ -27,5 +28,8 @@ _ ≡⟨ ab ⟩ bc = trans ab bc
 _∘_ : {A B C : Set} → (B → C) → (A → B) → (A → C)
 _∘_ g f a = g (f a)
 
-_$_ : ∀ {A B : Set} → (A → B) → (A → B)
+_$_ : {A B : Set} → (A → B) → (A → B)
 f $ x = f x
+
+id : {A : Set} → A → A
+id a = a

@@ -17,3 +17,4 @@ isos-uniq to f g t =
   from f t                 ≡⟨ sym $ from∘to≡id g (from f t) ⟩
   (from g ∘ to) (from f t) ≡⟨ cong (from g) (to∘from≡id f t) ⟩
   from g t                 ∎
+
