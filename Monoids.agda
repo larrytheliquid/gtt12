@@ -38,11 +38,11 @@ n+0≡n (suc n) = cong suc (n+0≡n n)
 record Monoid (S : Set) : Set₁ where
   infixr 9 _∙_
   field
-    e : S
+    ı : S
     _∙_ : (x y : S) → S
 
-    identl : (x : S) → e ∙ x ≡ x
-    identr : (x : S) → x ∙ e ≡ x
+    identl : (x : S) → ı ∙ x ≡ x
+    identr : (x : S) → x ∙ ı ≡ x
     assoc : (x y z : S) →
       x ∙ (y ∙ z) ≡ (x ∙ y) ∙ z
 
@@ -50,7 +50,7 @@ record Monoid (S : Set) : Set₁ where
 
 MonoidBool : Monoid Bool
 MonoidBool = record
-  { e = false
+  { ı = false
   ; _∙_ = _∨_
   ; identl = false∨b≡b
   ; identr = b∨false≡b
@@ -59,7 +59,7 @@ MonoidBool = record
 
 Monoidℕ : Monoid ℕ
 Monoidℕ = record
-  { e = zero
+  { ı = zero
   ; _∙_ = _+_
   ; identl = 0+n≡n
   ; identr = n+0≡n

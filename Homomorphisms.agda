@@ -32,10 +32,10 @@ kf-preserves+ _ _ = refl
 
 record Homomorphism {S S′} (M : Monoid S) (M′ : Monoid S′) : Set₁ where
   open Monoid M
-  open Monoid M′ renaming ( e to e′ ; _∙_ to _∙′_ )
+  open Monoid M′ renaming ( ı to ı′ ; _∙_ to _∙′_ )
   field
     f : S → S′
-    preserves-e : f e ≡ e′
+    preserves-ı : f ı ≡ ı′
     preserves-∙ : (x y : S) →
       f (x ∙ y) ≡ f x ∙′ f y
 
@@ -45,7 +45,7 @@ record Homomorphism′ {S S′} (M : Monoid S) (M′ : Monoid S′) : Set₁ whe
   open Monoid {{...}}
   field
     f : S → S′
-    preserves-e : f e ≡ e
+    preserves-ı : f ı ≡ ı
     preserves-∙ : (x y : S) →
       f (x ∙ y) ≡ f x ∙ f y
 
@@ -54,14 +54,14 @@ record Homomorphism′ {S S′} (M : Monoid S) (M′ : Monoid S′) : Set₁ whe
 Homomorphism∶gtz : Homomorphism Monoidℕ MonoidBool
 Homomorphism∶gtz = record
   { f = gtz
-  ; preserves-e = gtz0≡false
+  ; preserves-ı = gtz0≡false
   ; preserves-∙ = gtz-preserves+
   }
 
 Homomorphism∶kf : Homomorphism Monoidℕ MonoidBool
 Homomorphism∶kf = record
   { f = kf
-  ; preserves-e = kf0≡false
+  ; preserves-ı = kf0≡false
   ; preserves-∙ = kf-preserves+
   }
 

@@ -7,11 +7,11 @@ module CommutativeMonoids where
 record CommutativeMonoid (S : Set) : Set₁ where
   infixr 9 _∙_
   field
-    e : S
+    ı : S
     _∙_ : (x y : S) → S
 
-    identl : (x : S) → e ∙ x ≡ x
-    identr : (x : S) → x ∙ e ≡ x
+    identl : (x : S) → ı ∙ x ≡ x
+    identr : (x : S) → x ∙ ı ≡ x
     assoc : (x y z : S) →
       x ∙ (y ∙ z) ≡ (x ∙ y) ∙ z
     commut : (x y : S) →
