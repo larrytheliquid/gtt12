@@ -36,6 +36,15 @@ record CommutativeMonoid′′ (S : Set) : Set₁ where
 
 ----------------------------------------------------------------------
 
+record CommutativeMonoid′′′ (S : Set) : Set₁ where
+  open Monoid {{...}}
+  field
+    monoid : Monoid S
+    commut : (x y : S) → x ∙ y ≡ y ∙ x
+  open Monoid monoid public
+
+----------------------------------------------------------------------
+
 +commut : (x y : ℕ) →
   x + y ≡ y + x
 +commut zero y = sym (n+0≡n y)
