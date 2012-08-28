@@ -2,6 +2,8 @@ open import Prelude
 open import Isomorphisms
 module Equivalences where
 
+----------------------------------------------------------------------
+
 record Equivalence {A : Set} (_≈_ : A → A → Set) : Set where
   field
     refl≈ : {x : A} → x ≈ x
@@ -15,3 +17,4 @@ Equivalence≡ = record
   ; trans≈ = trans
   }
 
+----------------------------------------------------------------------

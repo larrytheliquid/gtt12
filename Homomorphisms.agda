@@ -4,6 +4,8 @@ open import Data.Nat
 open import Monoids
 module Homomorphisms where
 
+----------------------------------------------------------------------
+
 gtz : ℕ → Bool
 gtz zero = false
 gtz (suc _) = true
@@ -95,3 +97,4 @@ NaturalTransformation∶kt-gtz-kf = record
   ; natural = kt-natural-for-gtz-kf
   }
 
+----------------------------------------------------------------------

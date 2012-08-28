@@ -3,6 +3,8 @@ open import Data.Bool
 open import Data.Nat
 module Monoids where
 
+----------------------------------------------------------------------
+
 false∨b≡b : (b : Bool) →
   false ∨ b ≡ b
 false∨b≡b b = refl

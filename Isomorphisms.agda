@@ -4,6 +4,8 @@ open import Data.Nat
 open import Monoids
 module Isomorphisms where
 
+----------------------------------------------------------------------
+
 record Isomorphism {S T : Set} (to : S → T) : Set where
   field
     from : T → S
@@ -18,3 +20,4 @@ isos-uniq to f g t =
   (from g ∘ to) (from f t) ≡⟨ cong (from g) (to∘from≡id f t) ⟩
   from g t                 ∎
 
+----------------------------------------------------------------------

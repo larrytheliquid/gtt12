@@ -4,6 +4,8 @@ open import Data.Nat
 open import Data.List
 module RawMonoids where
 
+----------------------------------------------------------------------
+
 record RawMonoid (S : Set) : Set₁ where
   field
     ı : S
@@ -49,3 +51,4 @@ mconcat′′′ : ∀{A} {{ mon : RawMonoid A}} → List A → A
 mconcat′′′ [] = ı
 mconcat′′′ (x ∷ xs) = x ∙ mconcat′′′ xs
 
+----------------------------------------------------------------------

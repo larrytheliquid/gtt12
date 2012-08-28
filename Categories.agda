@@ -1,6 +1,8 @@
 open import Prelude
 module Categories where
 
+----------------------------------------------------------------------
+
 record Category (S : Set) : Set₁ where
   infixr 9 _∙_
   field
@@ -18,6 +20,8 @@ record Category (S : Set) : Set₁ where
       (x : A ➛ B) (y : B ➛ C) (z : C ➛ D) →
       (x ∙ (y ∙ z)) ≡ ((x ∙ y) ∙ z)
 
+----------------------------------------------------------------------
+
 record Functor {S S′} (∁ : Category S) (∁′ : Category S′) : Set where
   open Category ∁
   open Category ∁′ renaming ( _➛_ to _➛′_ ; ı to ı′ ; _∙_ to _∙′_ )
@@ -29,6 +33,8 @@ record Functor {S S′} (∁ : Category S) (∁′ : Category S′) : Set where
     preserves-∙ : {X Y Z : S}
       (x : X ➛ Y) (y : Y ➛ Z) →
       f (x ∙ y) ≡ f x ∙′ f y
+
+----------------------------------------------------------------------
 
 record NaturalTransformation {S S′} {∁ : Category S} {∁′ : Category S′}
   (F G : Functor ∁ ∁′) : Set where
@@ -42,3 +48,5 @@ record NaturalTransformation {S S′} {∁ : Category S} {∁′ : Category S′
     g : {A : S} → ∣f∣ A ➛′ ∣f∣′ A
     natural : {A B : S} (x : A ➛ B) →
       g ∙′ f′ x ≡ f x ∙′ g
+
+----------------------------------------------------------------------

@@ -4,6 +4,8 @@ open import Data.Nat
 open import Monoids
 module CommutativeMonoids where
 
+----------------------------------------------------------------------
+
 record CommutativeMonoid (S : Set) : Set₁ where
   infixr 9 _∙_
   field
@@ -84,3 +86,5 @@ CommutativeMonoidℕ = record
   { monoid = Monoidℕ
   ; commut = +commut
   }
+
+----------------------------------------------------------------------
