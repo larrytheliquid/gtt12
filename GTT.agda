@@ -26,4 +26,7 @@ import GTT.Category
           & Categories library
            for more examples
 
+http://wiki.portal.chalmers.se/agda
+ /pmwiki.php?n=Libraries.StandardLibrary
+https://github.com/copumpkin/categories
 ----------------------------------------------------------------------}
