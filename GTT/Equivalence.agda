@@ -1,4 +1,4 @@
-open import GTT.Equality
+open import GTT.Equality hiding ( _∎ )
 module GTT.Equivalence where
 
 infix 4 _≣_
@@ -10,6 +10,13 @@ record Equivalence {A : Set} (_≈_ : A → A → Set) : Set where
     refl≈ : {x : A} → x ≈ x
     sym≈ : {x y : A} → x ≈ y → y ≈ x
     trans≈ : {x y z : A} → x ≈ y → y ≈ z → x ≈ z
+
+  _∎ : (a : A) → a ≈ a
+  _ ∎ = refl≈
+
+  _≈⟨_⟩_ : (x : A) {y z : A} →
+    x ≈ y → y ≈ z → x ≈ z
+  _ ≈⟨ ab ⟩ bc = trans≈ ab bc
 
 ----------------------------------------------------------------------
 

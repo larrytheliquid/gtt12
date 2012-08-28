@@ -21,4 +21,8 @@ import GTT.Category
 
               Questions?
 
+        See Agda standard library
+          & Categories library
+           for more examples
+
 ----------------------------------------------------------------------}
