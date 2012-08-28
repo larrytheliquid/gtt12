@@ -15,6 +15,7 @@ import GTT.CommutativeMonoid
 import GTT.Isomorphism
 import GTT.Homomorphism
 import GTT.Equivalence
+import GTT.EquivalenceMonoid
 import GTT.Category
 
 {----------------------------------------------------------------------

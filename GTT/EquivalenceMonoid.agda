@@ -1,8 +1,8 @@
-open import Prelude
-open import Equivalences
-open import Monoids
+open import GTT.Equality
+open import GTT.Equivalence
+open import GTT.Monoid
 open import Data.Nat
-module EquivalenceMonoids where
+module GTT.EquivalenceMonoid where
 
 ----------------------------------------------------------------------
 
@@ -24,9 +24,22 @@ Monoidℕ/≡ : Monoid/≈ ℕ _≡_
 Monoidℕ/≡ = record
   { eq = Equivalence≡
   ; ı = Monoid.ı Monoidℕ
+  ; _∙_ = Monoid._∙_ Monoidℕ
   ; identl = Monoid.identl Monoidℕ
   ; identr = Monoid.identr Monoidℕ
   ; assoc = Monoid.assoc Monoidℕ
+  }
+
+----------------------------------------------------------------------
+
+Monoidλ/≣ : {A : Set} → Monoid/≈ (A → A) _≣_
+Monoidλ/≣ = record
+  { eq = Equivalence≣
+  ; ı = id
+  ; _∙_ = _∘_
+  ; identl = λ _ _ → refl
+  ; identr = λ _ _ → refl
+  ; assoc = λ _ _ _ _ → refl
   }
 
 ----------------------------------------------------------------------
