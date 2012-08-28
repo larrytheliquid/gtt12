@@ -1,5 +1,4 @@
 open import Prelude
-open import Isomorphisms
 module Equivalences where
 
 infix 4 _≣_
