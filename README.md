@@ -10,7 +10,7 @@ typed setting (e.g. in Agda).
 Covers depenent records, scoping, equational reasoning, and instance
 arguments.
 
-## [Elisp for slide view](https://gist.github.com/3504585) ##
+## [Elisp for slides/presentation mode](https://gist.github.com/3504585) ##
 
 Put your cursor between a comment block (`----`) and use `super-n` (for
 next slide) and `super-p` (for previous slide).
@@ -21,6 +21,8 @@ Use the import statements on `GTT.agda` as the index.
 
 * [Agda standard library](http://wiki.portal.chalmers.se/agda/pmwiki.php?n=Libraries.StandardLibrary)
 * [Categories library](https://github.com/copumpkin/categories)
+* [Agda reference manual](http://wiki.portal.chalmers.se/agda/pmwiki.php?n=ReferenceManual.TOC)
+* [Agda instance arguments](http://people.cs.kuleuven.be/~dominique.devriese/agda-non-canonical-implicits/)
 
 
 
