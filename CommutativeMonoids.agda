@@ -58,17 +58,13 @@ record CommutativeMonoid′′′ (S : Set) : Set₁ where
 
 ----------------------------------------------------------------------
 
-import Prelude
-
-----------------------------------------------------------------------
-
 +commut′ : (x y : ℕ) →
   x + y ≡ y + x
 
 +commut′ zero y = 
   zero + y ≡⟨ refl ⟩
   y        ≡⟨ sym (n+0≡n y) ⟩
-  y + 0    ∎
+  y + zero ∎
 
 +commut′ (suc x) y =
   suc x + y   ≡⟨ refl ⟩

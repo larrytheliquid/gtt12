@@ -21,12 +21,10 @@ b∨false≡b false = refl
 
 ----------------------------------------------------------------------
 
-0+n≡n : (n : ℕ) →
-  zero + n ≡ n
+0+n≡n : (n : ℕ) → zero + n ≡ n
 0+n≡n n = refl
 
-n+0≡n : (n : ℕ) →
-  n + zero ≡ n
+n+0≡n : (n : ℕ) → n + zero ≡ n
 n+0≡n zero = refl
 n+0≡n (suc n) = cong suc (n+0≡n n)
 
@@ -34,6 +32,53 @@ n+0≡n (suc n) = cong suc (n+0≡n n)
   x + (y + z) ≡ (x + y) + z
 +assoc zero y z = refl
 +assoc (suc x) y z = cong suc (+assoc x y z)
+
+----------------------------------------------------------------------
+
+import Prelude
+
+----------------------------------------------------------------------
+
+_+′_ : ℕ → ℕ → ℕ
+zero  +′ n = n
+suc m +′ n = suc (m +′ n)
+
+0+n≡n′ : (n : ℕ) → zero + n ≡ n
+0+n≡n′ n =
+  zero + n ≡⟨ refl ⟩
+  n        ∎
+
+----------------------------------------------------------------------
+
+n+0≡n′ : (n : ℕ) → n + zero ≡ n
+
+n+0≡n′ zero =
+  zero + zero ≡⟨ refl ⟩
+  zero        ∎
+
+n+0≡n′ (suc n) =
+  suc n + zero   ≡⟨ refl ⟩
+  suc (n + zero) ≡⟨ cong suc (n+0≡n′ n) ⟩
+  suc n          ∎
+
+----------------------------------------------------------------------
+
++assoc′ : (x y z : ℕ) →
+  x + (y + z) ≡ (x + y) + z
+
++assoc′ zero y z =
+  zero + (y + z) ≡⟨ refl ⟩
+  y + z          ≡⟨ refl ⟩
+  (zero + y) + z ∎
+
++assoc′ (suc x) y z =
+  (suc x) + (y + z) ≡⟨ refl ⟩
+  suc (x + (y + z)) ≡⟨ cong suc ih ⟩
+  suc ((x + y) + z) ≡⟨ refl ⟩
+  (suc x + y) + z   ∎ where
+
+  ih : x + (y + z) ≡ (x + y) + z
+  ih = +assoc x y z
 
 ----------------------------------------------------------------------
 
