@@ -5,7 +5,8 @@ module TOC where
 {-
      Abstract "Anything" Theory
        & Proof Reuse via DTP
-          by Larry Diehl
+           by Larry Diehl
+           @larrytheliquid
 -}
 
 ----------------------------------------------------------------------

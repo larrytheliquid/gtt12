@@ -1,5 +1,0 @@
-
-
-     Abstract "Anything" Theory
-       & Proof Reuse via DTP
-          by Larry Diehl
