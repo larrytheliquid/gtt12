@@ -1,7 +1,7 @@
-open import Prelude
+open import GTT.Equality
 open import Data.Bool
 open import Data.Nat
-module Monoids where
+module GTT.Monoid where
 
 ----------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ n+0≡n (suc n) = cong suc (n+0≡n n)
 
 ----------------------------------------------------------------------
 
-import Prelude
+import GTT.Equality
 
 ----------------------------------------------------------------------
 

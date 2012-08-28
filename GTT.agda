@@ -1,4 +1,4 @@
-module TOC where
+module GTT where
 
 {----------------------------------------------------------------------
 
@@ -9,13 +9,13 @@ module TOC where
 
 ----------------------------------------------------------------------}
 
-import RawMonoids
-import Monoids
-import CommutativeMonoids
-import Isomorphisms
-import Homomorphisms
-import Equivalences
-import Categories
+import GTT.RawMonoid
+import GTT.Monoid
+import GTT.CommutativeMonoid
+import GTT.Isomorphism
+import GTT.Homomorphism
+import GTT.Equivalence
+import GTT.Category
 
 {----------------------------------------------------------------------
 

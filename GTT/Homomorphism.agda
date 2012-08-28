@@ -1,8 +1,8 @@
-open import Prelude
+open import GTT.Equality
 open import Data.Bool
 open import Data.Nat
-open import Monoids
-module Homomorphisms where
+open import GTT.Monoid
+module GTT.Homomorphism where
 
 ----------------------------------------------------------------------
 

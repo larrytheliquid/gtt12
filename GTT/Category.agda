@@ -1,5 +1,5 @@
-open import Prelude
-module Categories where
+open import GTT.Equality
+module GTT.Category where
 
 ----------------------------------------------------------------------
 

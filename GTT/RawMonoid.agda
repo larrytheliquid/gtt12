@@ -1,8 +1,8 @@
-open import Prelude
+open import GTT.Equality
 open import Data.Bool
 open import Data.Nat
 open import Data.List
-module RawMonoids where
+module GTT.RawMonoid where
 
 ----------------------------------------------------------------------
 

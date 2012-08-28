@@ -1,8 +1,8 @@
-open import Prelude
+open import GTT.Equality
 open import Data.Bool
 open import Data.Nat
-open import Monoids
-module CommutativeMonoids where
+open import GTT.Monoid
+module GTT.CommutativeMonoid where
 
 ----------------------------------------------------------------------
 

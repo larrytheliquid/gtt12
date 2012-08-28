@@ -1,4 +1,4 @@
-module Prelude where
+module GTT.Equality where
 
 infix  2 _∎ _≡_
 infixr 2 _≡⟨_⟩_

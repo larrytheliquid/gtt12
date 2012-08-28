@@ -1,5 +1,5 @@
-open import Prelude
-module Equivalences where
+open import GTT.Equality
+module GTT.Equivalence where
 
 infix 4 _≣_
 
