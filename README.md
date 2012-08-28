@@ -1,9 +1,7 @@
 [Abstract "Anything" Theory & Proof Reuse via DTP](http://corp.galois.com/blog/2012/8/21/tech-talk-abstract-anything-theory-and-proof-reuse-via-dtp.html)
 ==================================================
-Galois Tech Talk
-----------------
 
-## Description ##
+## Galois Tech Talk ##
 
 How abstractions that appear as type classes (e.g. in
 Haskell), behave when extended with propositions in a dependently
