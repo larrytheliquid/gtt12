@@ -4,10 +4,10 @@
 ## Galois Tech Talk ##
 
 How abstractions that appear as type classes (e.g. in
-Haskell), behave when extended with propositions in a dependently
+Haskell) behave when extended with propositions in a dependently
 typed setting (e.g. in Agda).
 
-Covers depenent records, scoping, equational reasoning, and instance
+Covers dependent records, scoping, equational reasoning, and instance
 arguments.
 
 ## [Elisp for slides/presentation mode](https://gist.github.com/3504585) ##
